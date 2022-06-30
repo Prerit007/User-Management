@@ -1,0 +1,93 @@
+<div class="col-6">
+  <div class="form-floating mb-3">
+    <input
+      type="text"
+      class="form-control"
+      id="floatingInput"
+      value="{{this.fname}}"
+      placeholder="First Name"
+      name="fname"
+    />
+    <div class="col-auto">
+      <span id="HelpInline" class="form-text">
+        Your First Name
+      </span>
+    </div>
+    <label for="floatingInput">First Name</label>
+  </div>
+</div>
+<div class="col-6">
+  <div class="form-floating mb-3">
+    <input
+      type="text"
+      class="form-control"
+      id="floatingInput"
+      value="{{this.lname}}"
+      placeholder="Last Name"
+      name="lname"
+    />
+    <div class="col-auto">
+      <span id="HelpInline" class="form-text">
+        Your Last Name
+      </span>
+    </div>
+    <label for="floatingInput">Last Name</label>
+  </div>
+</div>
+<div class="col-6">
+  <div class="form-floating mb-3">
+    <input
+      type="email"
+      class="form-control"
+      id="floatingInput"
+      value="{{this.emial}}"
+      placeholder="email@email.com"
+      name="emial"
+    />
+    <div class="col-auto">
+      <span id="HelpInline" class="form-text">
+        Must be Unique
+      </span>
+    </div>
+    <label for="floatingInput">Email</label>
+  </div>
+</div>
+<div class="col-6">
+  <div class="form-floating mb-3">
+    <input
+      type="text"
+      class="form-control"
+      id="floatingInput"
+      value="{{this.phone}}"
+      placeholder="Phone"
+      name="phone"
+    />
+    <div class="col-auto">
+      <span id="HelpInline" class="form-text">
+        Must included your Country Code followed by Number.
+      </span>
+    </div>
+    <label for="floatingInput">Phone</label>
+  </div>
+</div>
+<div class="col-12">
+  <div class="form-floating mb-3">
+    <textarea
+      class="form-control"
+      placeholder="Leave a comment here"
+      id="comments"
+      name="comments"
+      style="height: 200px"
+    >{{this.comments}}</textarea>
+    <div class="col-auto">
+      <span id="HelpInline" class="form-text">
+        Comment is not Compulsory
+      </span>
+    </div>
+    <label for="comments">Comments</label>
+  </div>
+
+</div>
+<div class="col-2 d-grid">
+  <button class="btn btn-primary btn-small" type="submit">Submit</button>
+</div>
