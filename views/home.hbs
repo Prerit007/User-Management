@@ -1,62 +1,85 @@
-{{#if re}}
-  <div class="alert alert-success alert-dismissible fade show" role="alert">
-    User Has Been Removed Successfully
-    <button
-      type="button"
-      class="btn-close"
-      data-bs-dismiss="alert"
-      aria-label="Close"
-    ></button>
-  </div>
-{{/if}}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    {{#if re}}
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        User Has Been Removed Successfully
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
+      </div>
+    {{/if}}
 
-<div class="row">
-  <div class="col-6 justify-self-center"><h1>Users</h1></div>
-</div>
+    <div class="row">
+      <div class="col-6 justify-self-center"><h1>Users</h1></div>
+    </div>
 
-<table class="table table-hover table-bordered">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First Name</th>
-      <th scope="col">Last Name</th>
-      <th scope="col">Email Address</th>
-      <th scope="col">Phone</th>
-      <th scope="col" class="text-end">Action</th>
-    </tr>
-  </thead>
-  <tbody>
-    {{#each rows}}
-      <tr>
-        <th scope="row">{{this.id}}</th>
-        <td>{{this.fname}}</td>
-        <td>{{this.lname}}</td>
-        <td>{{this.emial}}</td>
-        <td>{{this.phone}}</td>
-        <td class="text-end">
-          <a
-            href="/view/{{this.id}}"
-            type="button"
-            class="btn btn-primary btn-small align-self-center"
-          ><i class="bi bi-eye-fill"></i>
-            View
-          </a>
-          <a
-            href="/edit/{{this.id}}"
-            type="button"
-            class="btn btn-success btn-small align-self-center"
-          ><i class="bi bi-pen-fill"></i>
-            Edit
-          </a>
-          <a
-            href="/{{this.id}}"
-            type="button"
-            class="btn btn-outline-danger btn-small align-self-center"
-          ><i class="bi bi-person-x-fill"></i>
-            Delete
-          </a>
-        </td>
-      </tr>
-    {{/each}}
-  </tbody>
-</table>
+    <table class="table table-hover table-bordered">
+      <thead class="thead-dark">
+        <tr style="text-align: center;font-size: 18px">
+          <th scope="col"><i class="bi bi-person-fill"></i></th>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">Email Address</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each rows}}
+          <tr style="text-align: center;font-size: 18px">
+            <th scope="row">{{this.id}}</th>
+            <td>{{this.fname}}</td>
+            <td>{{this.lname}}</td>
+            <td>{{this.emial}}</td>
+            <td>{{this.phone}}</td>
+            <td>
+
+              <a
+                href="/view/{{this.id}}"
+                type="button"
+                class="btn btn-primary btn-lg"
+                data-bs-toggle="tooltip"
+                data-bs-placement="left"
+                title="View"
+              ><i class="bi bi-eye-fill"></i>
+              </a>
+              <a
+                href="/edit/{{this.id}}"
+                type="button"
+                class="btn btn-success btn-lg"
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                title="Edit"
+              ><i class="bi bi-pen-fill"></i>
+              </a>
+              <a
+                href="/{{this.id}}"
+                type="button"
+                class="btn btn-outline-danger btn-lg"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+                title="Delete"
+              ><i class="bi bi-trash3-fill"></i>
+              </a>
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+
+    <script>
+      var tooltipTriggerList =
+      [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]')) var
+      tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) { return
+      new bootstrap.Tooltip(tooltipTriggerEl) })
+    </script>
+  </body>
+</html>
