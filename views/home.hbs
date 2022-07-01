@@ -3,6 +3,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
   </head>
   <body>
     {{#if re}}
@@ -23,8 +24,16 @@
 
     <table class="table table-hover table-bordered">
       <thead class="thead-dark">
-        <tr style="text-align: center;font-size: 18px">
-          <th scope="col"><i class="bi bi-person-fill"></i></th>
+        <tr style="text-align: center;font-size: 18px;vertical-align: middle;">
+          <th scope="col"><lord-icon
+              src="https://cdn.lordicon.com/ajkxzzfb.json"
+              trigger="loop-on-hover"
+              colors="primary:#ffc738,secondary:#4bb3fd"
+              scale="65"
+              state="hover-looking-around"
+              style="width:34px;height:34px"
+            >
+            </lord-icon></th>
           <th scope="col">First Name</th>
           <th scope="col">Last Name</th>
           <th scope="col">Email Address</th>
@@ -34,7 +43,9 @@
       </thead>
       <tbody>
         {{#each rows}}
-          <tr style="text-align: center;font-size: 18px">
+          <tr
+            style="text-align: center;font-size: 18px;vertical-align: middle;"
+          >
             <th scope="row">{{this.id}}</th>
             <td>{{this.fname}}</td>
             <td>{{this.lname}}</td>
@@ -49,7 +60,14 @@
                 data-bs-toggle="tooltip"
                 data-bs-placement="left"
                 title="View"
-              ><i class="bi bi-eye-fill"></i>
+              ><lord-icon
+                  src="https://cdn.lordicon.com/hbvgknxo.json"
+                  trigger="loop-on-hover"
+                  colors="primary:#231e2d,secondary:#4bb3fd,tertiary:#ebe6ef"
+                  scale="75"
+                  style="width:30px;height:27px"
+                >
+                </lord-icon>
               </a>
               <a
                 href="/edit/{{this.id}}"
@@ -58,7 +76,15 @@
                 data-bs-toggle="tooltip"
                 data-bs-placement="top"
                 title="Edit"
-              ><i class="bi bi-pen-fill"></i>
+              ><lord-icon
+                  src="https://cdn.lordicon.com/alzqexpi.json"
+                  trigger="loop-on-hover"
+                  colors="primary:#121331,secondary:#646e78,tertiary:#ffc738,quaternary:#f9c9c0,quinary:#ebe6ef"
+                  scale="75"
+                  state="hover-1"
+                  style="width:30px;height:27px"
+                >
+                </lord-icon>
               </a>
               <a
                 href="/{{this.id}}"
@@ -67,7 +93,17 @@
                 data-bs-toggle="tooltip"
                 data-bs-placement="right"
                 title="Delete"
-              ><i class="bi bi-trash3-fill"></i>
+              >
+                <lord-icon
+                  src="https://cdn.lordicon.com/exkbusmy.json"
+                  trigger="loop-on-hover"
+                  colors="outline:#121331,primary:#646e78,secondary:#4bb3fd,tertiary:#ebe6ef"
+                  scale="59"
+                  state="morph-trash-in"
+                  style="width:30px;height:27px"
+                >
+                </lord-icon>
+
               </a>
             </td>
           </tr>
